@@ -1,0 +1,38 @@
+# Config
+python-dotenv
+
+# Data + database
+pandas
+sqlalchemy
+psycopg2-binary
+sqlglot
+
+# LLM + RAG
+openai
+langchain
+langchain-core
+langchain-openai
+langchain-community
+langchain-text-splitters
+
+# Vector database
+qdrant-client
+langchain-qdrant
+
+# Knowledge graph
+neo4j
+
+# MCP + agent
+mcp
+langchain-mcp-adapters
+langgraph
+langsmith
+
+# UI + charts
+streamlit
+plotly
+
+# Dev
+jupyter
+kaggle
+pytest

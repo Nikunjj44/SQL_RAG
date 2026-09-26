@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: olist-postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: olist
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  neo4j:
+    image: neo4j:5
+    container_name: olist-neo4j
+    environment:
+      NEO4J_AUTH: neo4j/olistgraph123
+    ports:
+      - "7474:7474"   # browser UI
+      - "7687:7687"   # bolt protocol (what Python uses)
+    volumes:
+      - neo4jdata:/data
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: olist-qdrant
+    ports:
+      - "6333:6333"   # REST API + web dashboard
+      - "6334:6334"   # gRPC
+    volumes:
+      - qdrantdata:/qdrant/storage
+
+volumes:
+  pgdata:
+  neo4jdata:
+  qdrantdata:
