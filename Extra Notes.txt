@@ -1,0 +1,12 @@
+To view the deployed table with data
+
+-- Open Table Plus
+-- Establish new Connection 
+    -- db_name = olist
+    -- localhost:5432
+    -- usr / pass -- admin / admin
+
+-- OR -- 
+-- The following command opens postgresql in the terminal
+
+-- docker exec -it olist-postgres psql -U admin -d olist
